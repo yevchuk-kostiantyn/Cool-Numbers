@@ -1,0 +1,1 @@
+# A cool number is determined by the following process. Start with the initial integer. Replace this number with the sum of the square of its digits. Repeat this process until the result is 1 (where the sequence remains 1) or it loops endlessly.
