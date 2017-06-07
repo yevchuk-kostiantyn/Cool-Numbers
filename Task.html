@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://dev.getethos.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ethos</title>
+  <style>
+    .container {
+      padding: 75px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo {
+      width: 200px;
+      margin-bottom: 50px;
+    }
+    .title {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    #instructions {
+      width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="./Task_files/logo.png">
+    <h3 class="title">Figure out how to get to the next page. Good luck!</h3>
+    <div id="instructions">
+      <p>
+        A "cool number" is determined by the following process. Start with the initial integer.
+        Replace this number with the sum of the square of its digits. Repeat this process
+        until the result is 1 (where the sequence remains 1) or it loops endlessly.
+      </p>
+
+      <p>
+        For instance, let's take 23 as an example:<br>
+        1. 2^2 + 3^2 = 13<br>
+        2. 1^2 + 3^2 = 10<br>
+        3. 1^2 + 0^2 = 1<br>
+        Therefore 23 is a "cool number";
+      </p>
+      <p>
+        HINT: <strong>All</strong> "uncool numbers" will yield "4" at some point in their sequence then repeat in a loop forever.
+      </p>
+      <p>
+        Your task: determine the sum of all "cool numbers" starting with 1 and going up to and including 1,000,000.
+      </p>
+      <p>
+        When you're done, make a POST request to the following APIs:<br><br>
+        /code1, /code2, /code3, ..., /code100<br><br>
+        with the header
+        <strong>"X-COOL-SUM"</strong> equal to your answer. Most of the routes will return 404. But some will return a letter when provided with the right "cool sum". The code is the letters put together in the order of the requests.
+      </p>
+      <p>
+        TIP: I often get messages from frustrated people asking me if there's a bug in this challenge. I never guarantee that any app is 100% bug-free, but many people have been able to complete this challenge. So chances are, if you are struggling, it isn't a bug ;).
+      </p>
+    </div>
+    <form method="post">
+      <input name="code" id="code">
+      <button>Continue</button>
+    </form>
+    <script src="./Task_files/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="./Task_files/es6-promise.auto.min.js"></script>
+  </div>
+
+
+</body></html>
